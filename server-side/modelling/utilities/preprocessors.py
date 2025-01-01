@@ -569,3 +569,32 @@ def correct_signals(y_pred, df, selector_config, estimator_name, target_size_fre
         # plt.savefig(f'./figures & images/segment splined {begin_index} to {end_index}.jpg')
 
     return res_df, dict_metrics
+
+
+def attach_label_to_number(conf_matrix: list | np.ndarray):
+    """
+    [
+        [15, 20],
+        [10, 54]
+    ]
+
+    turns this confusion matrix into a more understandable one
+    such that true negatives (specificity), false negatives (), 
+    true positives (sensitivity), and false positives are added to each number in the confusion
+    matrix
+    """
+    
+    # init matrix
+    temp = [[0, 0], [0, 0]]
+    for i in range(len(conf_matrix[0])):
+        for j in range(len(conf_matrix[1])):
+            if i == 0 and j == 0:
+                temp[0][0] = f"TN:"
+            elif i == 0 and j == 1:
+                temp[0][1] = f"FP:"
+            elif i == 1 and j == 0:
+                temp[1][0] = f"FN:"
+            elif i == 1 and j == 1:
+                temp[1][1] = f"TP:"
+
+    return np.array(temp)
