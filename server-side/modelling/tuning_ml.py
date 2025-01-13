@@ -491,12 +491,15 @@ def train_final_estimator(subjects_features: pd.DataFrame,
     score = model.score(X, Y)
     print(f'{estimator_name} score: {score}')
 
+    # resulting string will be for instance C_1_gamma_0_probability_True
+    identifier = "_".join([f"{key}_{round(value)}" if type(value) == float else f"{key}_{round(value)}" for key, value in hyper_param_config.items()])
+    print(identifier)
     if hyper_param_config.get('class_weight') != None:
         neg_class_ratio = round(hyper_param_config['class_weight'][0])
         pos_class_ratio = round(hyper_param_config['class_weight'][1])
-        path = f'./saved/models/{selector_config}_{neg_class_ratio}_{pos_class_ratio}_weighted_{estimator_name}_clf.pkl'
+        path = f'./saved/models/{selector_config}_{neg_class_ratio}_{pos_class_ratio}_weighted_{identifier}_{estimator_name}_clf.pkl'
     else:
-        path = f'./saved/models/{selector_config}_{estimator_name}_clf.pkl'
+        path = f'./saved/models/{selector_config}_{identifier}_{estimator_name}_clf.pkl'
 
     save_model(model, path)
 
