@@ -19,16 +19,16 @@
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_0.1 probability_True --inc_class_weight --comp_type 2.6`
 
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1 gamma_0.1 probability_True` done
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_0.1 probability_True` to try
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_0.1 probability_True` to try
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_0.1 probability_True` done
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_0.1 probability_True` done
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1000 gamma_0.1 probability_True`
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1 gamma_0.5 probability_True` to try
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1 gamma_0.5 probability_True` done
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_0.5 probability_True` done
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_0.5 probability_True` to try
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_0.5 probability_True` done
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1000 gamma_0.5 probability_True`
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1 gamma_1 probability_True` to try
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_1 probability_True` to try
-* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_1 probability_True` to try
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1 gamma_1 probability_True` done
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_10 gamma_1 probability_True` done
+* `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_100 gamma_1 probability_True` done
 * `python tuning_ml.py -m svm -pl cueva_second_phase --mode training --hyper_param_list C_1000 gamma_1 probability_True`
 
 * `python tuning_ml.py -m svm -pl hossain --mode training --hyper_param_list C_10 gamma_0.1 probability_True`
