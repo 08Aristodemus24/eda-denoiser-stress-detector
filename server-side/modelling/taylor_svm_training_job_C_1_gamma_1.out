@@ -15,3 +15,11 @@ Module load: anaconda/3-2023.07-2
 Python 3.12.3
 ...............................................................
 Warning: using -h 0 may be faster
+*...........................*..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 92137
+obj = -55677.186279, rho = -0.692209
+nSV = 58032, nBSV = 56729
+Total nSV = 58032
+.....
