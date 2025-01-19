@@ -1,0 +1,37 @@
+Submitted on Mon Jan 20 00:49:58 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40936
+SLURM_JOB_NAME        : hossain_svm_training_job_C_1_gamma_0p01
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-35
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 24576
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40936
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+...................................................
+Warning: using -h 0 may be faster
+*..........*.........*.*
+optimization finished, #iter = 70980
+obj = -50810.939760, rho = -0.824915
+nSV = 52011, nBSV = 51148
+Total nSV = 52011
+..................................................
+Warning: using -h 0 may be faster
+*.............*.........*
+optimization finished, #iter = 71873
+obj = -50780.656179, rho = -0.841465
+nSV = 51978, nBSV = 51103
+Total nSV = 51978
+...................................................
+Warning: using -h 0 may be faster
+*...........*............*
+optimization finished, #iter = 73826
+obj = -50578.193287, rho = -0.845997
+nSV = 51761, nBSV = 50909
+Total nSV = 51761
+.......................
