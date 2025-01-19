@@ -484,7 +484,8 @@ def train_final_estimator(subjects_features: pd.DataFrame,
         X = scaler.fit_transform(X)
         save_model(scaler, f'./saved/misc/{selector_config}_{estimator_name}_scaler.pkl')
 
-        del hyper_param_config['class_weight']
+        if estimator_name == "gbt":
+            del hyper_param_config['class_weight']
 
     # create model with specific hyper param configurations
     # and fit to whole training and validation dataset
