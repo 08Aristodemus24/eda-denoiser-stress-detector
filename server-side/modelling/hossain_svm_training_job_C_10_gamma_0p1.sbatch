@@ -2,14 +2,15 @@
 #SBATCH --account=pup-manila    
 #SBATCH --partition=batch
 #SBATCH --qos=240c-1h_batch
-#SBATCH --ntasks=64
-#SBATCH --job-name="taylor_svm_training_job"
+##SBATCH --nodes=20
+#SBATCH --ntasks=12
+#SBATCH --job-name="hossain_svm_training_job_C_10_gamma_0p1"
 #SBATCH --output="%x.out"         ## <jobname>.<jobid>.out
 ##SBATCH --mail-type=ALL          ## optional
 ##SBATCH --mail-user=<email_add>  ## optional
 ##SBATCH --requeue                ## optional
 ##SBATCH --ntasks-per-node=1      ## optional
-#SBATCH --mem=100G                ## optional: mem per node
+#SBATCH --mem=24G                ## optional: mem per node
 ##SBATCH --error="%x.%j.err"      ## optional; better to use --output only
 
 ## For more `sbatch` options, use `man sbatch` in the HPC, or go to https://slurm.schedmd.com/sbatch.html.
@@ -48,7 +49,7 @@ module load anaconda/3-2023.07-2
 ## Main job. Run your codes, commands, and executables here; `srun` is optional.
 conda activate thesis-writing-1
 python --version
-python tuning_ml.py -m svm -pl taylor --mode training --hyper_param_list C_10 gamma_0.1 probability_True
+python tuning_ml.py -m svm -pl hossain --mode training --hyper_param_list C_10 gamma_0.1 probability_True
 
 ## Flush the TMPDIR.
 if [[ $custom_tmp == "yes" ]]; then
