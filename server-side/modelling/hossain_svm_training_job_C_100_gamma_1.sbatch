@@ -4,7 +4,7 @@
 #SBATCH --qos=batch_default
 ##SBATCH --nodes=20
 #SBATCH --ntasks=12
-#SBATCH --job-name="hossain_svm_training_job_C_10_gamma_0p1"
+#SBATCH --job-name="hossain_svm_training_job_C_100_gamma_1"
 #SBATCH --output="%x.out"         ## <jobname>.<jobid>.out
 ##SBATCH --mail-type=ALL          ## optional
 ##SBATCH --mail-user=<email_add>  ## optional
@@ -49,7 +49,7 @@ module load anaconda/3-2023.07-2
 ## Main job. Run your codes, commands, and executables here; `srun` is optional.
 conda activate thesis-writing-1
 python --version
-python tuning_ml.py -m svm -pl hossain --mode training --hyper_param_list C_10 gamma_0.1 probability_True
+python tuning_ml.py -m svm -pl hossain --mode training --hyper_param_list C_100 gamma_1 probability_True
 
 ## Flush the TMPDIR.
 if [[ $custom_tmp == "yes" ]]; then

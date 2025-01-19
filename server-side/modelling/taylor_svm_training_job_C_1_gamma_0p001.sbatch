@@ -2,8 +2,8 @@
 #SBATCH --account=pup-manila    
 #SBATCH --partition=batch
 #SBATCH --qos=240c-1h_batch
-#SBATCH --ntasks=64
-#SBATCH --job-name="taylor_svm_training_job_C_10_gamma_0p1"
+#SBATCH --ntasks=12
+#SBATCH --job-name="taylor_svm_training_job_C_1_gamma_0p001"
 #SBATCH --output="%x.out"         ## <jobname>.<jobid>.out
 ##SBATCH --mail-type=ALL          ## optional
 ##SBATCH --mail-user=<email_add>  ## optional
@@ -48,7 +48,7 @@ module load anaconda/3-2023.07-2
 ## Main job. Run your codes, commands, and executables here; `srun` is optional.
 conda activate thesis-writing-1
 python --version
-python tuning_ml.py -m svm -pl taylor --mode training --hyper_param_list C_10 gamma_0.1 probability_True
+python tuning_ml.py -m svm -pl taylor --mode training --hyper_param_list C_1 gamma_0.001 probability_True
 
 ## Flush the TMPDIR.
 if [[ $custom_tmp == "yes" ]]; then
