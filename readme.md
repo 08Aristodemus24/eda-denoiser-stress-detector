@@ -37,6 +37,8 @@
 * `scp -r -i C:/Users/LARRY/.ssh/id_rsa "C:/Users/LARRY/Documents/Scripts/thesis-writing-1/server-side/modelling/data/Artifact Detection Data/" michael.cueva@202.90.149.55:/home/michael.cueva/scratch1/thesis-writing-1/server-side/modelling/data/`
 * `scp -r -i C:/Users/LARRY/.ssh/id_rsa michael.cueva@202.90.149.55:/home/michael.cueva/scratch1/thesis-writing-1/server-side/modelling/saved/models/taylor_svm_clf.pkl C:/Users/LARRY/documents/scripts/thesis-writing-1/server-side/modelling/saved/models/`
 
+* `cp hossain_svm_training_job_C_10_gamma_0p1.sbatch hossain_svm_training_job_C_1_gamma_0p001.sbatch`
+
 # This repository contains all generalized code snippets and templates relating to model experimentation, training, evaluation, testing, server-side loading, client-side requests, usage documentation, loaders, evaluators, visualizers, and preprocessor utilities, and the model architectures, figures, and final folder
 
 # Requirements:
