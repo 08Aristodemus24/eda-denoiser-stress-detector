@@ -56,4 +56,13 @@ Total nSV = 64844
 Warning: using -h 0 may be faster
 *......
 Warning: using -h 0 may be faster
-*...
+*.........
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 75386
+obj = -64063.348378, rho = 0.540775
+nSV = 64850, nBSV = 64811
+Total nSV = 64850
+.....................................

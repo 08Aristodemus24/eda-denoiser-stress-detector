@@ -35,4 +35,25 @@ optimization finished, #iter = 92362
 obj = -523821.457442, rho = -2.304927
 nSV = 53130, nBSV = 52911
 Total nSV = 53130
-....................................
+...................................................................
+Warning: using -h 0 may be faster
+*..............
+Warning: using -h 0 may be faster
+*.......
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 87619
+obj = -524944.325445, rho = -2.865260
+nSV = 53228, nBSV = 53008
+Total nSV = 53228
+................................................................
+Warning: using -h 0 may be faster
+*.................
+Warning: using -h 0 may be faster
+*.........
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 89815
+obj = -525597.715271, rho = -2.109972
+nSV = 53307, nBSV = 53076
+Total nSV = 53307
