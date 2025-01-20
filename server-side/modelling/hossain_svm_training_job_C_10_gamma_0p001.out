@@ -57,3 +57,52 @@ optimization finished, #iter = 89815
 obj = -525597.715271, rho = -2.109972
 nSV = 53307, nBSV = 53076
 Total nSV = 53307
+................................................................
+Warning: using -h 0 may be faster
+*............
+Warning: using -h 0 may be faster
+*.....
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 81175
+obj = -524351.000045, rho = -2.375483
+nSV = 53187, nBSV = 52959
+Total nSV = 53187
+.....................................................................
+Warning: using -h 0 may be faster
+*...............
+Warning: using -h 0 may be faster
+*.....
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 89057
+obj = -654739.360951, rho = 2.172148
+nSV = 66342, nBSV = 66099
+Total nSV = 66342
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 10, 'gamma': 0.001, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9242632557198113
+./saved/models/hossain_C_10_gamma_0p001_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 13:14:48 PST 2025
+Total runtime (sec): 34948.43683218956
