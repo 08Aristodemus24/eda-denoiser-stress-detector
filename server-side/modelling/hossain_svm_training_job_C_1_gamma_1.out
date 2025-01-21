@@ -43,3 +43,30 @@ optimization finished, #iter = 500364
 obj = -57082.290614, rho = -0.135708
 nSV = 101719, nBSV = 47750
 Total nSV = 101719
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'int'>
+<class 'bool'>
+{'C': 1, 'gamma': 1, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9445581262172109
+./saved/models/hossain_C_1_gamma_1_probability_True_class_weight_None_svm_clf.pkl
+Finished on Tue Jan 21 16:25:11 PST 2025
+Total runtime (sec): 139590.58322691917
