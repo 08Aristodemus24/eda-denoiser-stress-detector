@@ -34,30 +34,6 @@ models = {
     "cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm": {
 
     },
-    "cueva_second_phase-C_1_gamma_0p5_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_1_gamma_1_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_10_gamma_0p1_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_10_gamma_0p5_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_10_gamma_1_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_100_gamma_0p1_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_100_gamma_0p5_probability_True_class_weight_None_svm": {
-
-    },
-    "cueva_second_phase-C_100_gamma_1_probability_True_class_weight_None_svm": {
-
-    },
     'cueva-lstm-fe': {
         # 'model':
         # 'hyper_params':
@@ -124,15 +100,7 @@ def load_miscs():
     hossain_lr_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_lr_feature_set.txt')
     hossain_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_svm_feature_set.txt')
     hossain_gbt_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_gbt_feature_set.txt')
-    cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
-    cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
+    cueva_second_phase_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
    
 
     # pre-load reduced features here so that features don't have to 
@@ -144,14 +112,6 @@ def load_miscs():
     models['hossain-svm']['selected_feats'] = hossain_svm_red_feats
     models['hossain-gbt']['selected_feats'] = hossain_gbt_red_feats 
     models['cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_1_gamma_0p5_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_1_gamma_1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_10_gamma_0p1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_10_gamma_0p5_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_10_gamma_1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_100_gamma_0p1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_100_gamma_0p5_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_red_feats
-    models['cueva_second_phase-C_100_gamma_1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_red_feats
 
     print('miscellaneous loaded.')
 
