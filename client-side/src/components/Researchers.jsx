@@ -4,7 +4,7 @@ export default function Correspondence(){
 
     return (
         <Section section-name={"researchers"}>
-            <h1>Researchers</h1>
+            <h1 className="researchers-header">Researchers</h1>
         </Section>
     )
 }

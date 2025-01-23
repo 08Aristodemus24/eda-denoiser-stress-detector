@@ -704,9 +704,13 @@
 
 
 #about-section{
-  /* size for each section*/
-  /* take into account navbar in data-form section */
-  /* min-height: calc(100vh - clamp(3.5rem, 6.5vw, 6.5rem)); */
+  /* design */
+  background-color: var(--primary-background);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.about-content{
+  /* size */
   min-height: 100vh;
 
   /* position */
@@ -714,17 +718,64 @@
 
   /* display */
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
+  column-gap: 2rem;
+
+  /* margin */
+  margin-inline: 2rem;
 
   /* design */
-  background-color: var(--primary-background);
-  font-family: 'Nunito Sans', sans-serif;
+  /* outline: 1px solid green; */
 }
 
-#about-section h1{
+
+.about-content .research-title{
+  /* display */
+  align-self: flex-start;
+
+  /* size */
+  width: 20em;
+
+  /* design */
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.5rem, 3.75vw, 3.75rem);
+  font-style: italic;
+  word-spacing: 2.5px;
+  font-size: clamp(0.75rem, 3vw, 3rem);
+  text-align: left;
+  outline: 1px solid rebeccapurple;
+}
+
+.about-content .research-description{
+  width: 25%;
+
+  /* desing */
+  text-align: justify;
+  outline: 1px solid red;
+}
+
+.research-description.block-1::first-letter{
+  /* design */
+  -webkit-initial-letter: 2 2;
+  initial-letter: 2 2;
+  /* border: 1px solid red; */
+
+  /* top right bottom left margin */
+  margin: 0 0.25rem 0 0;
+}
+
+.research-description.block-1::first-line{
+  font-weight: bold;
+  color: black;
+}
+
+.research-description a{
+  text-decoration: none;
+  color: rgb(77, 6, 200);
+}
+
+.research-description.block-2{
+  align-self: flex-end;
 }
 
 #faq-section{
@@ -744,6 +795,15 @@
   /* design */
   background-color: var(--primary-background);
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.faq-content .faq-header{
+  /* design */
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  word-spacing: 2.5px;
+  font-size: clamp(0.75rem, 3vw, 3rem);
+  /* outline: 1px solid red; */
 }
 
 div.bullet{
@@ -783,7 +843,14 @@ div.bullet{
   font-family: 'Nunito Sans', sans-serif;
 }
 
-
+.researchers-content .researchers-header{
+  /* design */
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  word-spacing: 2.5px;
+  font-size: clamp(0.75rem, 3vw, 3rem);
+  /* outline: 1px solid red; */
+}
 
 /* FOOTER */
 .footer-container{

@@ -4,7 +4,7 @@ export default function Correspondence(){
 
     return (
         <Section section-name={"faq"}>
-            <h2 className="faq-header">Frequently asked questions</h2>
+            <h1 className="faq-header">Frequently asked questions</h1>
             <div className="grid-container">
                 <div className="grid-col">
                     <div className="mb-10">
