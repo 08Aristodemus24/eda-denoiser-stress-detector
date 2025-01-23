@@ -722,7 +722,10 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
-
+#about-section h1{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3.75vw, 3.75rem);
+}
 
 #faq-section{
   /* size for each section*/

@@ -31,43 +31,44 @@ CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5000", "https://ed
 
 # global variables
 models = {
-    "cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm": {
-
+    "cueva-C_1_gamma_0p1_svm": {
+        # 'model':
+        # 'hyper_params':
+    },
+    "hossain-n_estimators_600_learning_rate_0p01_max_depth_10_gbt": {
+        # 'model':
+        # 'hyper_params':
+        # 'scaler':
+    },
+    "taylor-n_estimators_600_max_depth_30_class_weight_None_rf": {
+        # 'model':
+        # 'selected_feats':
+    },
+    "taylor-C_10_gamma_0p1_svm": {
+        # 'model':
+        # 'selected_feats':
+    },
+    "hossain-C_100_gamma_0p01_svm": {
+        # 'model':
+        # 'selected_feats':
+        # 'scaler':
+    },
+    'taylor-C_100_class_weight_None_lr': {
+        # 'model':
+        # 'selected_feats':
+    },
+    'hossain-C_10_class_weight_None_lr': {
+        # 'model':
+        # 'selected_feats':
+        # 'scaler':
+    },
+    'jurado-lstm-cnn': {
+        # 'model':
+        # 'selected_feats':
     },
     'cueva-lstm-fe': {
         # 'model':
         # 'hyper_params':
-    },
-    'jurado-lstm-cnn': {
-        # 'model':
-        # 'hyper_params':
-    },
-    'taylor-svm': {
-        # 'model':
-        # 'selected_feats':
-    },
-    'taylor-lr': {
-        # 'model':
-        # 'selected_feats':
-    },
-    'taylor-rf': {
-        # 'model':
-        # 'selected_feats':
-    },
-    'hossain-gbt': {
-        # 'model':
-        # 'selected_feats':
-        # 'scaler':
-    },
-    'hossain-svm': {
-        # 'model':
-        # 'selected_feats':
-        # 'scaler':
-    },
-    'hossain-lr': {
-        # 'model':
-        # 'selected_feats':
-        # 'scaler':
     },
     'stress-detector': {
 
@@ -100,18 +101,18 @@ def load_miscs():
     hossain_lr_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_lr_feature_set.txt')
     hossain_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_svm_feature_set.txt')
     hossain_gbt_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_hossain_gbt_feature_set.txt')
-    cueva_second_phase_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
+    cueva_svm_red_feats = load_lookup_array(f'./modelling/data/Artifact Detection Data/reduced_cueva_second_phase_svm_feature_set.txt')
    
 
     # pre-load reduced features here so that features don't have to 
     # be loaded every single time user makes a request
-    models['taylor-lr']['selected_feats'] = taylor_lr_red_feats
-    models['taylor-svm']['selected_feats'] = taylor_svm_red_feats
-    models['taylor-rf']['selected_feats'] = taylor_rf_red_feats
-    models['hossain-lr']['selected_feats'] = hossain_lr_red_feats
-    models['hossain-svm']['selected_feats'] = hossain_svm_red_feats
-    models['hossain-gbt']['selected_feats'] = hossain_gbt_red_feats 
-    models['cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm']['selected_feats'] = cueva_second_phase_svm_red_feats
+    models['taylor-C_100_class_weight_None_lr']['selected_feats'] = taylor_lr_red_feats
+    models['taylor-C_10_gamma_0p1_svm']['selected_feats'] = taylor_svm_red_feats
+    models['taylor-n_estimators_600_max_depth_30_class_weight_None_rf']['selected_feats'] = taylor_rf_red_feats
+    models['hossain-C_10_class_weight_None_lr']['selected_feats'] = hossain_lr_red_feats
+    models['hossain-C_100_gamma_0p01_svm']['selected_feats'] = hossain_svm_red_feats
+    models['hossain-n_estimators_600_learning_rate_0p01_max_depth_10_gbt']['selected_feats'] = hossain_gbt_red_feats 
+    models['cueva-C_1_gamma_0p1_svm']['selected_feats'] = cueva_svm_red_feats
 
     print('miscellaneous loaded.')
 
@@ -127,34 +128,18 @@ def load_preprocessors():
     print('loading preprocessors...')
 
     # pre-load here scaler of hossain used during training
-    hossain_lr_scaler = load_model('./modelling/saved/misc/hossain_lr_scaler.pkl')
-    hossain_svm_scaler = load_model('./modelling/saved/misc/hossain_svm_scaler.pkl')
-    hossain_gbt_scaler = load_model('./modelling/saved/misc/hossain_gbt_scaler.pkl')
-    cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
-    cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
+    hossain_C_10_class_weight_None_lr_scaler = load_model('./modelling/saved/misc/hossain_lr_scaler.pkl')
+    hossain_C_100_gamma_0p01_svm_scaler = load_model('./modelling/saved/misc/hossain_svm_scaler.pkl')
+    hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_scaler = load_model('./modelling/saved/misc/hossain_gbt_scaler.pkl')
+    cueva_C_1_gamma_0p1_svm_scaler = load_model('./modelling/saved/misc/cueva_second_phase_svm_scaler.pkl')
     
     # separate loading of scaler for stress detection
     xgb_scaler = load_model('./modelling/saved/misc/xgb_scaler.pkl')
 
-    models['hossain-lr']['scaler'] = hossain_lr_scaler
-    models['hossain-svm']['scaler'] = hossain_svm_scaler
-    models['hossain-gbt']['scaler'] = hossain_gbt_scaler
-    models['cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_1_gamma_0p5_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_1_gamma_1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_10_gamma_0p1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_10_gamma_0p5_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_10_gamma_1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_100_gamma_0p1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_100_gamma_0p5_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_scaler
-    # models['cueva_second_phase-C_100_gamma_1_probability_True_class_weight_None_svm']['scaler'] = cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_scaler
+    models['hossain-C_10_class_weight_None_lr']['scaler'] = hossain_C_10_class_weight_None_lr_scaler
+    models['hossain-C_100_gamma_0p01_svm']['scaler'] = hossain_C_100_gamma_0p01_svm_scaler
+    models['hossain-n_estimators_600_learning_rate_0p01_max_depth_10_gbt']['scaler'] = hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_scaler
+    models['cueva-C_1_gamma_0p1_svm']['scaler'] = cueva_C_1_gamma_0p1_svm_scaler
 
     models['stress-detector']['scaler'] = xgb_scaler
 
@@ -179,21 +164,13 @@ def load_models():
     lstm_fe_main = tf.keras.Model(inputs=lstm_fe.inputs, outputs=lstm_layer_2.output)
 
     # # pre load saved machine learning models
-    taylor_lr = load_model('./modelling/saved/models/taylor_C_100_class_weight_None_lr_clf.pkl')
-    taylor_svm = load_model('./modelling/saved/models/taylor_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
-    taylor_rf = load_model('./modelling/saved/models/taylor_n_estimators_600_max_depth_30_class_weight_None_rf_clf.pkl')
-    hossain_lr = load_model('./modelling/saved/models/hossain_C_10_class_weight_None_lr_clf.pkl')
-    hossain_svm = load_model('./modelling/saved/models/hossain_C_100_gamma_0p01_probability_True_class_weight_None_svm_clf.pkl')
-    hossain_gbt = load_model('./modelling/saved/models/hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_clf.pkl')
-    cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_clf = load_model('./modelling/saved/models/cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_clf.pkl')
-    # cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_clf = load_model('./saved/models/cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_clf.pkl')
+    taylor_C_100_class_weight_None_lr = load_model('./modelling/saved/models/taylor_C_100_class_weight_None_lr_clf.pkl')
+    taylor_C_10_gamma_0p1_svm = load_model('./modelling/saved/models/taylor_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
+    taylor_n_estimators_600_max_depth_30_class_weight_None_rf = load_model('./modelling/saved/models/taylor_n_estimators_600_max_depth_30_class_weight_None_rf_clf.pkl')
+    hossain_C_10_class_weight_None_lr = load_model('./modelling/saved/models/hossain_C_10_class_weight_None_lr_clf.pkl')
+    hossain_C_100_gamma_0p01_svm = load_model('./modelling/saved/models/hossain_C_100_gamma_0p01_probability_True_class_weight_None_svm_clf.pkl')
+    hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt = load_model('./modelling/saved/models/hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_clf.pkl')
+    cueva_C_1_gamma_0p1_svm = load_model('./modelling/saved/models/cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
 
     # load stress detector model separately
     stress_detector = load_model('./modelling/saved/models/stress_detector.pkl')
@@ -202,21 +179,13 @@ def load_models():
     models['jurado-lstm-cnn']['model'] = jurado_lstm_cnn
     models['cueva-lstm-fe']['model'] = lstm_fe
 
-    models['taylor-lr']['model'] = taylor_lr
-    models['taylor-svm']['model'] = taylor_svm
-    models['taylor-rf']['model'] = taylor_rf
-    models['hossain-lr']['model'] = hossain_lr
-    models['hossain-svm']['model'] = hossain_svm
-    models['hossain-gbt']['model'] = hossain_gbt
-    models['cueva_second_phase-C_1_gamma_0p1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_1_gamma_0p1_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_1_gamma_0p5_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_1_gamma_1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_1_gamma_1_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_10_gamma_0p1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_10_gamma_0p5_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_10_gamma_0p5_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_10_gamma_1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_10_gamma_1_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_100_gamma_0p1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_100_gamma_0p1_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_100_gamma_0p5_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_100_gamma_0p5_probability_True_class_weight_None_svm_clf
-    # models['cueva_second_phase-C_100_gamma_1_probability_True_class_weight_None_svm']['model'] = cueva_second_phase_C_100_gamma_1_probability_True_class_weight_None_svm_clf
+    models['taylor-C_100_class_weight_None_lr']['model'] = taylor_C_100_class_weight_None_lr
+    models['taylor-C_10_gamma_0p1_svm']['model'] = taylor_C_10_gamma_0p1_svm
+    models['taylor-n_estimators_600_max_depth_30_class_weight_None_rf']['model'] = taylor_n_estimators_600_max_depth_30_class_weight_None_rf
+    models['hossain-C_10_class_weight_None_lr']['model'] = hossain_C_10_class_weight_None_lr
+    models['hossain-C_100_gamma_0p01_svm']['model'] = hossain_C_100_gamma_0p01_svm
+    models['hossain-n_estimators_600_learning_rate_0p01_max_depth_10_gbt']['model'] = hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt
+    models['cueva-C_1_gamma_0p1_svm']['model'] = cueva_C_1_gamma_0p1_svm
 
     models['stress-detector']['model'] = stress_detector
 
@@ -462,7 +431,7 @@ def predict():
 
         # if hossain is the researcher chosen the scaler used during training
         # will be used to scale the test subject features
-        if selector_config == "cueva_second_phase":    
+        if selector_config == "cueva":    
             scaler = models[model_name]['scaler']
             X = scaler.transform(X)
 

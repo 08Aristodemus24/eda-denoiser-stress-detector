@@ -9,14 +9,14 @@ export default function Footer({ children }){
     <footer className="footer-container">
       <div className="footer-content">
           <div className="wrapper">
-              <p className="footer-credits">Powered by DOST-ASTI COARE <a href="https://ph.linkedin.com/in/lara-marie-cueva-423925248">LinkedIn</a>.</p>
+              <p className="footer-credits">Powered by <a href="https://asti.dost.gov.ph/">DOST-ASTI</a> and <a href="https://coare.asti.dost.gov.ph/">DOST-ASTI COARE</a>.</p>
               <div className="footer-sponsors">
                 <img src={dost_asti} alt="" className="dost-asti-logo"/>
                 <img src={dost} alt="" className="dost-logo"/>
                 <img src={coare} alt="" className="coare-logo"/>
               </div>
               <p className="footer-end">
-                  2023 © by Michael Cueva. All rights reserved.
+                  2024 © by Michael Cueva. All rights reserved.
               </p>
           </div>
       </div>
