@@ -44,7 +44,7 @@ models = {
         # 'model':
         # 'selected_feats':
     },
-    "taylor-C_10_gamma_0p1_svm": {
+    "taylor-C_1000_gamma_0p1_svm": {
         # 'model':
         # 'selected_feats':
     },
@@ -107,7 +107,7 @@ def load_miscs():
     # pre-load reduced features here so that features don't have to 
     # be loaded every single time user makes a request
     models['taylor-C_100_class_weight_None_lr']['selected_feats'] = taylor_lr_red_feats
-    models['taylor-C_10_gamma_0p1_svm']['selected_feats'] = taylor_svm_red_feats
+    models['taylor-C_1000_gamma_0p1_svm']['selected_feats'] = taylor_svm_red_feats
     models['taylor-n_estimators_600_max_depth_30_class_weight_None_rf']['selected_feats'] = taylor_rf_red_feats
     models['hossain-C_10_class_weight_None_lr']['selected_feats'] = hossain_lr_red_feats
     models['hossain-C_100_gamma_0p01_svm']['selected_feats'] = hossain_svm_red_feats
@@ -165,7 +165,7 @@ def load_models():
 
     # # pre load saved machine learning models
     taylor_C_100_class_weight_None_lr = load_model('./modelling/saved/models/taylor_C_100_class_weight_None_lr_clf.pkl')
-    taylor_C_10_gamma_0p1_svm = load_model('./modelling/saved/models/taylor_C_10_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
+    taylor_C_1000_gamma_0p1_svm = load_model('./modelling/saved/models/taylor_C_1000_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl')
     taylor_n_estimators_600_max_depth_30_class_weight_None_rf = load_model('./modelling/saved/models/taylor_n_estimators_600_max_depth_30_class_weight_None_rf_clf.pkl')
     hossain_C_10_class_weight_None_lr = load_model('./modelling/saved/models/hossain_C_10_class_weight_None_lr_clf.pkl')
     hossain_C_100_gamma_0p01_svm = load_model('./modelling/saved/models/hossain_C_100_gamma_0p01_probability_True_class_weight_None_svm_clf.pkl')
@@ -180,7 +180,7 @@ def load_models():
     models['cueva-lstm-fe']['model'] = lstm_fe
 
     models['taylor-C_100_class_weight_None_lr']['model'] = taylor_C_100_class_weight_None_lr
-    models['taylor-C_10_gamma_0p1_svm']['model'] = taylor_C_10_gamma_0p1_svm
+    models['taylor-C_1000_gamma_0p1_svm']['model'] = taylor_C_1000_gamma_0p1_svm
     models['taylor-n_estimators_600_max_depth_30_class_weight_None_rf']['model'] = taylor_n_estimators_600_max_depth_30_class_weight_None_rf
     models['hossain-C_10_class_weight_None_lr']['model'] = hossain_C_10_class_weight_None_lr
     models['hossain-C_100_gamma_0p01_svm']['model'] = hossain_C_100_gamma_0p01_svm

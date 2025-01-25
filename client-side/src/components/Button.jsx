@@ -9,6 +9,10 @@ export default function Button({ children }){
     let style;
     const designs = useContext(DesignsContext);
     const themes = useContext(ThemeContext);
+
+    /** where to actually display or undisplay path object when either show raw or show correct states are changed */
+    let { initSprSheet, showRaw, showCorrect, showArt, showStressLevels } = useContext(FormInputsContext);
+
     const { design, theme } = themes;
     
     // sometimes themes context will contain only the design 
@@ -34,10 +38,13 @@ export default function Button({ children }){
         }
     } : null;
 
+    console.log(`iniSprSheet is empty? ${initSprSheet == 0 ? true : false}`);
+
     return (
         <div className={`submit-btn-container ${design}`} style={style}>
-            <button 
-                type="submit" 
+            <button
+                disabled={initSprSheet == 0 ? true : false}
+                type="submit"
                 className={`submit-btn ${design}`} 
                 onMouseDown={toggle} 
                 onMouseUp={toggle} 

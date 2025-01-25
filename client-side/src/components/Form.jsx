@@ -127,8 +127,8 @@ export default function Form(){
                     <SpreadSheetInput/>
                     <InputGroup>
                         <Checkbox label="show raw" name="show_raw"/>
-                        <Checkbox label="show correct" name="show_correct"/>
                         <Checkbox label="show artifact" name="show_artifact"/>
+                        <Checkbox label="show correct" name="show_correct"/>
                         <Checkbox label="show stress levels" name="show_stress_levels"/>
                     </InputGroup>
                     <Button/>

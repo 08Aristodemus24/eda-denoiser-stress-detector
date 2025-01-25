@@ -572,6 +572,18 @@
   transition-timing-function: ease-in-out, ease-in-out;
 }
 
+.sharp-minimal .submit-btn[disabled]{
+  outline: 1px solid grey;
+  color: grey;
+}
+
+.sharp-minimal .submit-btn[disabled]:hover{
+  /* design */
+  cursor: auto;
+  color: grey;
+  background-color: var(--secondary-color);
+}
+
 .sharp-minimal .submit-btn:hover{
   /* design */
   cursor: pointer;
@@ -707,6 +719,8 @@
   /* design */
   background-color: var(--primary-background);
   font-family: 'Nunito Sans', sans-serif;
+  
+  
 }
 
 .about-content{
@@ -718,13 +732,15 @@
 
   /* display */
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
   align-items: center;
-  column-gap: 2rem;
+  row-gap: 1rem;
 
   /* margin */
-  margin-inline: 2rem;
-
+  margin: 1rem;
+  
   /* design */
   /* outline: 1px solid green; */
 }
@@ -735,7 +751,7 @@
   align-self: flex-start;
 
   /* size */
-  width: 20em;
+  width: 80%;
 
   /* design */
   font-family: 'Cormorant Garamond', serif;
@@ -743,15 +759,16 @@
   word-spacing: 2.5px;
   font-size: clamp(0.75rem, 3vw, 3rem);
   text-align: left;
-  outline: 1px solid rebeccapurple;
+  /* outline: 1px solid rebeccapurple; */
 }
 
 .about-content .research-description{
-  width: 25%;
+  width: 50%;
 
   /* desing */
   text-align: justify;
-  outline: 1px solid red;
+  font-size: clamp(10px, 1vw, 1rem);
+  /* outline: 1px solid red; */
 }
 
 .research-description.block-1::first-letter{
@@ -779,22 +796,28 @@
 }
 
 #faq-section{
+
+  /* design */
+  background-color: var(--primary-background);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.faq-content{
   /* size for each section*/
   /* take into account navbar in data-form section */
   /* min-height: calc(100vh - clamp(3.5rem, 6.5vw, 6.5rem)); */
   min-height: 100vh;
+  width: 100%;
 
   /* position */
   position: relative;
 
   /* display */
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  /* design */
-  background-color: var(--primary-background);
-  font-family: 'Nunito Sans', sans-serif;
+  justify-content: center;
+  flex-direction:column;
+  row-gap: 1rem;
 }
 
 .faq-content .faq-header{
@@ -806,20 +829,96 @@
   /* outline: 1px solid red; */
 }
 
-div.bullet{
+.faq-content .grid-container{
   /* display */
-  display: inline-block;
-  
-  /* margin */
-  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  column-gap: 2rem;
 
   /* design */
-  outline: 2px solid black;
-  border-radius: 50%;
+  outline: 2px solid green;
+}
+
+.grid-col:first-child{
+  width: 45%;
+  /* background-color: aquamarine; */
+}
+
+.grid-col:last-child{
+  width: 45%;
+  /* background-color:violet; */
+}
+
+.qa-container{
+  /* position */
+  position: relative;
 
   /* size */
-  height: 10px;
-  width: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  /* design */
+  outline: 2px solid green;
+}
+
+.qa-container .question{
+  /* position */
+  position: relative;
+  
+  /* display */
+  display: flex;
+
+  /* design */
+  outline: 1px solid black;
+}
+
+.qa-container .question::before{
+  /* display */
+  display: block;
+
+  /* design */
+  content: '';
+  border-radius: 100rem;
+  border: 1px solid grey;
+  background-color: white;
+
+  /* size */
+  height: 2px;
+  width: 20px;
+
+  /* position */
+  position: absolute;
+}
+
+.qa-container .question::after{
+  /* display */
+  display: block;
+
+  /* design */
+  content: '';
+  border-radius: 100rem;
+  border: 1px solid grey;
+  background-color: white;
+
+  /* size */
+  height: 2px;
+  width: 20px;
+
+  /* position */
+  position: absolute;
+  bottom: 0;
+}
+
+.qa-container .answer{
+  /* position */
+  position: absolute;
+  inset: 0;
+
+  /* background-color: aquamarine; */
+
+  outline: 1px solid red;
+  /* display: none; */
 }
 
 
@@ -881,7 +980,7 @@ div.bullet{
   /* border: 3px solid green; */
 
   /* spacing */
-  margin-block: 1rem  ;
+  margin-block: 1rem;
 
   /* display */
   display: flex;
@@ -948,4 +1047,20 @@ div.bullet{
 
   /* size */
   width: max-content;
+}
+
+@media (width < 862px){
+  .about-content .research-description.block-2{
+    align-self: center;
+  }
+
+  .about-content .research-title{
+    align-self: center;
+    text-align: center;
+  }
+
+  .faq-content .grid-container{
+    flex-direction: column;
+    align-items: center;
+  }
 }

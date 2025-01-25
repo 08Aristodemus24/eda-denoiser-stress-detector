@@ -16,7 +16,7 @@ export default function Footer({ children }){
                 <img src={coare} alt="" className="coare-logo"/>
               </div>
               <p className="footer-end">
-                  2024 © by Michael Cueva. All rights reserved.
+                  2024 © by Michael Cueva, Deseree Quiray, Johana Benolirao, Christaline Calubayan. All rights reserved.
               </p>
           </div>
       </div>
