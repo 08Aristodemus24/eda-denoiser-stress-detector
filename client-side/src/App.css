@@ -733,23 +733,19 @@
   /* display */
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   justify-content: center;
-  align-items: center;
+  align-items: start;
   row-gap: 1rem;
 
   /* margin */
-  margin: 1rem;
+  margin-inline: 5rem;
   
   /* design */
-  /* outline: 1px solid green; */
+  outline: 1px solid green;
 }
 
 
 .about-content .research-title{
-  /* display */
-  align-self: flex-start;
-
   /* size */
   width: 80%;
 
@@ -763,15 +759,27 @@
 }
 
 .about-content .research-description{
-  width: 50%;
+  /* design */
+  width: 100%;
 
-  /* desing */
+  display: flex;
+  column-gap: 2rem;
+
+  /* design */
   text-align: justify;
   font-size: clamp(10px, 1vw, 1rem);
   /* outline: 1px solid red; */
 }
 
-.research-description.block-1::first-letter{
+.research-description p[class^="block"]{
+  /* margin */
+  margin-block: 1rem;
+
+  /* design */
+  /* outline: 1px solid green; */
+}
+
+.research-description .block-1::first-letter{
   /* design */
   -webkit-initial-letter: 2 2;
   initial-letter: 2 2;
@@ -781,18 +789,18 @@
   margin: 0 0.25rem 0 0;
 }
 
-.research-description.block-1::first-line{
+.research-description .block-1::first-line{
   font-weight: bold;
   color: black;
+}
+
+.research-description .block-2{
+  align-self: flex-end;
 }
 
 .research-description a{
   text-decoration: none;
   color: rgb(77, 6, 200);
-}
-
-.research-description.block-2{
-  align-self: flex-end;
 }
 
 #faq-section{
@@ -1050,7 +1058,7 @@
 }
 
 @media (width < 862px){
-  .about-content .research-description.block-2{
+  .about-content .research-description{
     align-self: center;
   }
 
