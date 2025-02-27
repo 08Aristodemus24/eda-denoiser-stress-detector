@@ -1,0 +1,119 @@
+Submitted on Sun Jan 19 23:56:47 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40934
+SLURM_JOB_NAME        : hossain_gbt_training_job_n_estimators_600_learning_rate_0p01_max_depth_10
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-36
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40934
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'int'>
+{'n_estimators': 600, 'learning_rate': 0.01, 'max_depth': 10, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+      Iter       Train Loss   Remaining Time 
+         1           0.6474          212.90m
+         2           0.6394          211.57m
+         3           0.6319          211.30m
+         4           0.6249          210.30m
+         5           0.6182          210.28m
+         6           0.6119          209.60m
+         7           0.6059          209.67m
+         8           0.6002          209.05m
+         9           0.5946          209.02m
+        10           0.5893          208.44m
+        20           0.5462          205.05m
+        30           0.5143          201.62m
+        40           0.4892          198.13m
+        50           0.4686          194.46m
+        60           0.4515          191.01m
+        70           0.4370          187.37m
+        80           0.4245          183.84m
+        90           0.4137          180.29m
+       100           0.4043          176.69m
+       200           0.3506          140.99m
+       300           0.3275          105.67m
+       400           0.3141           70.48m
+       500           0.3056           35.25m
+       600           0.2993            0.00s
+gbt score: 0.9508820690795726
+./saved/models/hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_clf.pkl
+Finished on Mon Jan 20 02:08:58 PST 2025
+Total runtime (sec): 12703.641366481781
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'int'>
+{'n_estimators': 600, 'learning_rate': 0.01, 'max_depth': 10, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+      Iter       Train Loss   Remaining Time 
+         1           0.6474          214.38m
+         2           0.6394          213.84m
+         3           0.6319          215.29m
+         4           0.6249          214.82m
+         5           0.6183          214.78m
+         6           0.6119          214.05m
+         7           0.6059          213.57m
+         8           0.6002          214.65m
+         9           0.5946          213.85m
+        10           0.5893          213.13m
+        20           0.5462          209.11m
+        30           0.5143          205.04m
+        40           0.4892          201.42m
+        50           0.4686          197.43m
+        60           0.4515          193.71m
+        70           0.4369          190.66m
+        80           0.4246          187.25m
+        90           0.4139          183.58m
+       100           0.4045          179.73m
+       200           0.3507          142.72m
+       300           0.3276          106.43m
+       400           0.3142           71.03m
+       500           0.3058           35.68m
+       600           0.2994            0.00s
+gbt score: 0.9510079555299943
+./saved/models/hossain_n_estimators_600_learning_rate_0p01_max_depth_10_gbt_clf.pkl
+Finished on Mon Jan 20 03:32:20 PST 2025
+Total runtime (sec): 12932.438087463379

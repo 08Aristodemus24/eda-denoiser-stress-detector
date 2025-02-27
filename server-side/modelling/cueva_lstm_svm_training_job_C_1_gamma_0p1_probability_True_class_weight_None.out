@@ -1,0 +1,73 @@
+Submitted on Fri Nov 29 17:38:33 PST 2024
+JOB PARAMETERS
+SLURM_JOB_ID          : 36540
+SLURM_JOB_NAME        : cueva_lstm_svm_training_job
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-18
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 204800
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/36540
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+....................................................................................................................*.............................................................................................*.*
+optimization finished, #iter = 210681
+obj = -39077.677716, rho = 0.290139
+nSV = 64384, nBSV = 35757
+Total nSV = 64384
+..........................................................................................................................*..........................................................................................*.*
+optimization finished, #iter = 212816
+obj = -39075.264987, rho = 0.294335
+nSV = 64434, nBSV = 35757
+Total nSV = 64434
+.......................................................................................................................*............................................................................................*.*
+optimization finished, #iter = 211954
+obj = -38948.211295, rho = 0.296107
+nSV = 64264, nBSV = 35444
+Total nSV = 64264
+.........................................................................................................................*.........................................................................................*.*
+optimization finished, #iter = 210662
+obj = -39069.402180, rho = 0.292147
+nSV = 64151, nBSV = 35732
+Total nSV = 64151
+........................................................................................................................*...........................................................................................*
+optimization finished, #iter = 211492
+obj = -39009.922002, rho = 0.284671
+nSV = 64277, nBSV = 35684
+Total nSV = 64277
+................................................................................................................................................*..................................................................................................................*..*
+optimization finished, #iter = 260120
+obj = -48213.795236, rho = -0.278153
+nSV = 77455, nBSV = 44686
+Total nSV = 77455
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.1, 'probability': True, 'class_weight': None}
+Index(['HOF_2', 'HOF_7', 'HOF_8', 'HOF_9', 'HOF_10', 'HOF_12', 'HOF_14',
+       'HOF_16', 'HOF_17', 'HOF_18', 'HOF_19', 'HOF_20', 'HOF_21', 'HOF_22',
+       'HOF_26', 'HOF_27', 'HOF_32', 'raw_128hz_min', 'raw_128hz_amp',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_min', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_median',
+       'filt_128hz_1d_min', 'ar_coeff_1_128hz', 'ar_coeff_2_128hz',
+       'raw_128hz_skewness', 'third_16thofa_sec_max', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_std', 'third_16thofa_sec_std',
+       'first_16thofa_sec_median', 'second_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'first_32thofa_sec_median', 'second_32thofa_sec_median',
+       'second_32thofa_sec_range', 'raw_16hz_min', 'raw_16hz_range',
+       'raw_16hz_1d_min', 'raw_16hz_1d_range', 'filt_16hz_1d_avg_abs',
+       'ar_coeff_1_16hz', 'ar_coeff_2_16hz', 'ar_err_var_16hz',
+       'first_2thofa_sec_max', 'first_2thofa_sec_mean',
+       'third_2thofa_sec_mean', 'first_2thofa_sec_std',
+       'second_2thofa_sec_std', 'third_2thofa_sec_std',
+       'first_2thofa_sec_median', 'second_2thofa_sec_median',
+       'second_2thofa_sec_range'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9546884879860892
+Finished on Sat Nov 30 14:27:29 PST 2024
+Total runtime (sec): 74935.93289375305

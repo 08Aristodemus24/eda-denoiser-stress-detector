@@ -1,0 +1,84 @@
+Submitted on Mon Jan 20 00:49:58 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40936
+SLURM_JOB_NAME        : hossain_svm_training_job_C_1_gamma_0p01
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-35
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 24576
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40936
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+...................................................
+Warning: using -h 0 may be faster
+*..........*.........*.*
+optimization finished, #iter = 70980
+obj = -50810.939760, rho = -0.824915
+nSV = 52011, nBSV = 51148
+Total nSV = 52011
+..................................................
+Warning: using -h 0 may be faster
+*.............*.........*
+optimization finished, #iter = 71873
+obj = -50780.656179, rho = -0.841465
+nSV = 51978, nBSV = 51103
+Total nSV = 51978
+...................................................
+Warning: using -h 0 may be faster
+*...........*............*
+optimization finished, #iter = 73826
+obj = -50578.193287, rho = -0.845997
+nSV = 51761, nBSV = 50909
+Total nSV = 51761
+...................................................
+Warning: using -h 0 may be faster
+*...........*.......*
+optimization finished, #iter = 69314
+obj = -50600.824327, rho = -0.850007
+nSV = 51809, nBSV = 50937
+Total nSV = 51809
+....................................................
+Warning: using -h 0 may be faster
+*............*...........*
+optimization finished, #iter = 75385
+obj = -50870.805284, rho = -0.844728
+nSV = 52060, nBSV = 51174
+Total nSV = 52060
+.......................................................
+Warning: using -h 0 may be faster
+*.............*
+optimization finished, #iter = 68952
+obj = -63265.284611, rho = 0.851390
+nSV = 64681, nBSV = 63699
+Total nSV = 64681
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.01, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9264107304622995
+./saved/models/hossain_C_1_gamma_0p01_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 13:37:52 PST 2025
+Total runtime (sec): 46073.736159563065

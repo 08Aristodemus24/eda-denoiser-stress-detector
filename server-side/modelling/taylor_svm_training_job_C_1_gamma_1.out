@@ -1,0 +1,87 @@
+Submitted on Sun Jan 19 21:50:18 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40961
+SLURM_JOB_NAME        : taylor_svm_training_job_C_1_gamma_1
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-36
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 102400
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40961
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+...............................................................
+Warning: using -h 0 may be faster
+*...........................*..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 92137
+obj = -55677.186279, rho = -0.692209
+nSV = 58032, nBSV = 56729
+Total nSV = 58032
+...........................................................
+Warning: using -h 0 may be faster
+*...........................*..*
+optimization finished, #iter = 88050
+obj = -55838.532783, rho = -0.677812
+nSV = 58208, nBSV = 56946
+Total nSV = 58208
+............................................................
+Warning: using -h 0 may be faster
+*...........................*..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 88624
+obj = -55965.843898, rho = -0.704188
+nSV = 58349, nBSV = 57034
+Total nSV = 58349
+..............................................................
+Warning: using -h 0 may be faster
+*........................*..*
+optimization finished, #iter = 87777
+obj = -55764.739929, rho = -0.659064
+nSV = 58119, nBSV = 56841
+Total nSV = 58119
+...............................................................
+Warning: using -h 0 may be faster
+*........................*..*
+optimization finished, #iter = 88882
+obj = -55510.957369, rho = -0.683509
+nSV = 57907, nBSV = 56600
+Total nSV = 57907
+...................................................................
+Warning: using -h 0 may be faster
+*.............................*...*
+optimization finished, #iter = 99588
+obj = -69311.131491, rho = 0.707188
+nSV = 72111, nBSV = 70653
+Total nSV = 72111
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'int'>
+<class 'bool'>
+{'C': 1, 'gamma': 1, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_min', 'raw_128hz_median', 'raw_128hz_std', 'raw_128hz_range',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'filt_128hz_min', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_min', 'filt_128hz_1d_std',
+       'filt_128hz_1d_range', 'filt_128hz_1d_avg_abs', 'third_16thofa_sec_max',
+       'first_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'second_16thofa_sec_std', 'third_16thofa_sec_std',
+       'first_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std', 'raw_16hz_amp', 'raw_16hz_std',
+       'filt_16hz_max', 'filt_16hz_min', 'filt_16hz_std', 'filt_16hz_range',
+       'filt_16hz_1d_max', 'filt_16hz_1d_min', 'filt_16hz_1d_std',
+       'filt_16hz_1d_range', 'first_2thofa_sec_max', 'second_2thofa_sec_max',
+       'second_2thofa_sec_mean', 'second_2thofa_sec_median',
+       'second_4thofa_sec_max', 'second_4thofa_sec_std',
+       'second_4thofa_sec_median'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9193610892386832
+./saved/models/taylor_C_1_gamma_1_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 09:12:09 PST 2025
+Total runtime (sec): 40910.98339867592

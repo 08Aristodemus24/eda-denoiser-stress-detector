@@ -1,0 +1,84 @@
+Submitted on Mon Jan 20 01:12:49 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40937
+SLURM_JOB_NAME        : hossain_svm_training_job_C_1_gamma_0p1
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-20
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 24576
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40937
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+....................................................................................................
+Warning: using -h 0 may be faster
+*............................................................................................*........*
+optimization finished, #iter = 199765
+obj = -46887.940325, rho = -0.603904
+nSV = 52491, nBSV = 45353
+Total nSV = 52491
+......................................................................................................
+Warning: using -h 0 may be faster
+*...............................................................................................*.......*
+optimization finished, #iter = 203981
+obj = -47402.805092, rho = -0.621322
+nSV = 53092, nBSV = 45825
+Total nSV = 53092
+......................................................................................................
+Warning: using -h 0 may be faster
+*.........................................................................................*....*
+optimization finished, #iter = 195107
+obj = -47103.678923, rho = -0.612063
+nSV = 52755, nBSV = 45521
+Total nSV = 52755
+.........................................................................................................
+Warning: using -h 0 may be faster
+*....................................................................................................*...........*
+optimization finished, #iter = 215515
+obj = -46822.572184, rho = -0.618720
+nSV = 52484, nBSV = 45206
+Total nSV = 52484
+........................................................................................................
+Warning: using -h 0 may be faster
+*.............................................................................................*........*
+optimization finished, #iter = 204836
+obj = -47183.023332, rho = -0.611753
+nSV = 52819, nBSV = 45594
+Total nSV = 52819
+..........................................................................................................................
+Warning: using -h 0 may be faster
+*.......................................................................................................*........*
+optimization finished, #iter = 232772
+obj = -58725.346744, rho = 0.634244
+nSV = 65370, nBSV = 56934
+Total nSV = 65370
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.1, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9316263788885955
+./saved/models/hossain_C_1_gamma_0p1_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 15:25:55 PST 2025
+Total runtime (sec): 51185.62450003624

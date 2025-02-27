@@ -1,0 +1,67 @@
+Submitted on Sun Jan 19 21:06:17 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40918
+SLURM_JOB_NAME        : hossain_gbt_training_job_n_estimators_400_learning_rate_0p01_max_depth_5
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-36
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40918
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'int'>
+{'n_estimators': 600, 'learning_rate': 0.01, 'max_depth': 5, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+      Iter       Train Loss   Remaining Time 
+         1           0.6491          103.86m
+         2           0.6427          103.04m
+         3           0.6366          102.90m
+         4           0.6309          102.91m
+         5           0.6255          102.56m
+         6           0.6204          102.28m
+         7           0.6156          102.49m
+         8           0.6109          102.28m
+         9           0.6065          102.05m
+        10           0.6023          101.84m
+        20           0.5677          100.05m
+        30           0.5419           98.45m
+        40           0.5220           96.63m
+        50           0.5059           95.03m
+        60           0.4925           93.32m
+        70           0.4812           91.53m
+        80           0.4716           89.80m
+        90           0.4632           88.04m
+       100           0.4559           86.29m
+       200           0.4127           68.94m
+       300           0.3950           52.03m
+       400           0.3854           34.92m
+       500           0.3800           17.55m
+       600           0.3762            0.00s
+gbt score: 0.933833094313635
+./saved/models/hossain_n_estimators_600_learning_rate_0p01_max_depth_5_gbt_clf.pkl
+Finished on Sun Jan 19 22:52:13 PST 2025
+Total runtime (sec): 6356.183634996414

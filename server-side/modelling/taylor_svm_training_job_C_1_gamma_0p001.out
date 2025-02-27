@@ -1,0 +1,119 @@
+Submitted on Sun Jan 19 21:50:33 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40964
+SLURM_JOB_NAME        : taylor_svm_training_job_C_1_gamma_0p001
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-36
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 102400
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40964
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+.............................................................
+Warning: using -h 0 may be faster
+*.....
+Warning: using -h 0 may be faster
+*......
+Warning: using -h 0 may be faster
+*...
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 75597
+obj = -63799.516158, rho = 0.820271
+nSV = 64576, nBSV = 64543
+Total nSV = 64576
+.............................................................
+Warning: using -h 0 may be faster
+*..........
+Warning: using -h 0 may be faster
+*...
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 73777
+obj = -63790.023506, rho = 0.770088
+nSV = 64553, nBSV = 64525
+Total nSV = 64553
+...............................................................
+Warning: using -h 0 may be faster
+*...
+Warning: using -h 0 may be faster
+*....
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 71654
+obj = -64042.269826, rho = 0.719256
+nSV = 64844, nBSV = 64812
+Total nSV = 64844
+...........................................................
+Warning: using -h 0 may be faster
+*......
+Warning: using -h 0 may be faster
+*.........
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 75386
+obj = -64063.348378, rho = 0.540775
+nSV = 64850, nBSV = 64811
+Total nSV = 64850
+...............................................................
+Warning: using -h 0 may be faster
+*.....
+Warning: using -h 0 may be faster
+*....
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 71143
+obj = -63807.637597, rho = 0.737454
+nSV = 64590, nBSV = 64559
+Total nSV = 64590
+..........................................................
+Warning: using -h 0 may be faster
+*.......
+Warning: using -h 0 may be faster
+*.........
+Warning: using -h 0 may be faster
+*....
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 78919
+obj = -79659.084390, rho = -0.807595
+nSV = 80662, nBSV = 80629
+Total nSV = 80662
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.001, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_min', 'raw_128hz_median', 'raw_128hz_std', 'raw_128hz_range',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'filt_128hz_min', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_min', 'filt_128hz_1d_std',
+       'filt_128hz_1d_range', 'filt_128hz_1d_avg_abs', 'third_16thofa_sec_max',
+       'first_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'second_16thofa_sec_std', 'third_16thofa_sec_std',
+       'first_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std', 'raw_16hz_amp', 'raw_16hz_std',
+       'filt_16hz_max', 'filt_16hz_min', 'filt_16hz_std', 'filt_16hz_range',
+       'filt_16hz_1d_max', 'filt_16hz_1d_min', 'filt_16hz_1d_std',
+       'filt_16hz_1d_range', 'first_2thofa_sec_max', 'second_2thofa_sec_max',
+       'second_2thofa_sec_mean', 'second_2thofa_sec_median',
+       'second_4thofa_sec_max', 'second_4thofa_sec_std',
+       'second_4thofa_sec_median'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9033068642672545
+./saved/models/taylor_C_1_gamma_0p001_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 13:28:55 PST 2025
+Total runtime (sec): 56302.195269823074

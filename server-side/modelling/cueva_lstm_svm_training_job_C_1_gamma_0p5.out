@@ -1,0 +1,77 @@
+Submitted on Mon Jan 13 09:24:00 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40414
+SLURM_JOB_NAME        : cueva_lstm_svm_training_job_C_1_gamma_0p5
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-26
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 204800
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40414
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+.........................................................................................................................................................................................*....................................................................................*
+optimization finished, #iter = 269478
+obj = -36013.032315, rho = 0.594530
+nSV = 143503, nBSV = 26348
+Total nSV = 143503
+..........................................................................................................................................................................................*.....................................................................................*.*
+optimization finished, #iter = 271747
+obj = -36203.329381, rho = 0.593668
+nSV = 144024, nBSV = 26497
+Total nSV = 144024
+.........................................................................................................................................................................................*....................................................................................*
+optimization finished, #iter = 269285
+obj = -35930.310021, rho = 0.597016
+nSV = 143607, nBSV = 26319
+Total nSV = 143607
+..........................................................................................................................................................................................*....................................................................................*.*
+optimization finished, #iter = 270943
+obj = -36019.596948, rho = 0.596874
+nSV = 143744, nBSV = 26319
+Total nSV = 143744
+..........................................................................................................................................................................................*....................................................................................*
+optimization finished, #iter = 270151
+obj = -36073.574382, rho = 0.597578
+nSV = 143753, nBSV = 26427
+Total nSV = 143753
+....................................................................................................................................................................................................................................*.........................................................................................................*.*
+optimization finished, #iter = 333026
+obj = -43607.880132, rho = -0.582534
+nSV = 170964, nBSV = 32036
+Total nSV = 170964
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.5, 'probability': True, 'class_weight': None}
+Index(['HOF_2', 'HOF_7', 'HOF_8', 'HOF_9', 'HOF_10', 'HOF_12', 'HOF_14',
+       'HOF_16', 'HOF_17', 'HOF_18', 'HOF_19', 'HOF_20', 'HOF_21', 'HOF_22',
+       'HOF_26', 'HOF_27', 'HOF_32', 'raw_128hz_min', 'raw_128hz_amp',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_min', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_median',
+       'filt_128hz_1d_min', 'ar_coeff_1_128hz', 'ar_coeff_2_128hz',
+       'raw_128hz_skewness', 'third_16thofa_sec_max', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_std', 'third_16thofa_sec_std',
+       'first_16thofa_sec_median', 'second_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'first_32thofa_sec_median', 'second_32thofa_sec_median',
+       'second_32thofa_sec_range', 'raw_16hz_min', 'raw_16hz_range',
+       'raw_16hz_1d_min', 'raw_16hz_1d_range', 'filt_16hz_1d_avg_abs',
+       'ar_coeff_1_16hz', 'ar_coeff_2_16hz', 'ar_err_var_16hz',
+       'first_2thofa_sec_max', 'first_2thofa_sec_mean',
+       'third_2thofa_sec_mean', 'first_2thofa_sec_std',
+       'second_2thofa_sec_std', 'third_2thofa_sec_std',
+       'first_2thofa_sec_median', 'second_2thofa_sec_median',
+       'second_2thofa_sec_range'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9838958267467595
+./saved/models/cueva_second_phase_C_1_gamma_0p5_probability_True_class_weight_None_svm_clf.pkl
+Finished on Thu Jan 16 09:07:23 PST 2025
+Total runtime (sec): 258203.44223213196

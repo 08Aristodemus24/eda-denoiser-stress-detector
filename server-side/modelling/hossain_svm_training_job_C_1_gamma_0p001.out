@@ -1,0 +1,106 @@
+Submitted on Mon Jan 20 00:31:35 PST 2025
+JOB PARAMETERS
+SLURM_JOB_ID          : 40935
+SLURM_JOB_NAME        : hossain_svm_training_job_C_1_gamma_0p001
+SLURM_JOB_NUM_NODES   : 1
+SLURM_JOB_NODELIST    : saliksik-cpu-35
+SLURM_NTASKS          : 12
+SLURM_NTASKS_PER_NODE : 
+SLURM_MEM_PER_NODE    : 24576
+TMPDIR                : /tmp/michael.cueva/SLURM_JOB_ID/40935
+Cache ERROR: Cache file requires at least Modules version 5.4
+  In '/opt/modules/modulefiles/cpu/.modulecache'
+  Please contact <root@localhost>
+Module load: anaconda/3-2023.07-2
+Python 3.12.3
+.............................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 48033
+obj = -54783.173155, rho = -2.561449
+nSV = 55945, nBSV = 55846
+Total nSV = 55945
+............................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 46537
+obj = -54418.692844, rho = -2.553779
+nSV = 55596, nBSV = 55508
+Total nSV = 55596
+.............................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 47957
+obj = -54500.284666, rho = -2.269970
+nSV = 55638, nBSV = 55556
+Total nSV = 55638
+............................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 46466
+obj = -54517.445134, rho = -2.420399
+nSV = 55662, nBSV = 55567
+Total nSV = 55662
+............................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*.
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 46898
+obj = -54637.828537, rho = -2.150849
+nSV = 55770, nBSV = 55689
+Total nSV = 55770
+.................................................
+Warning: using -h 0 may be faster
+*..
+Warning: using -h 0 may be faster
+*
+optimization finished, #iter = 51194
+obj = -67913.629259, rho = 2.317459
+nSV = 69332, nBSV = 69230
+Total nSV = 69332
+subjects features, labels, names and subject to id lookup loaded
+<class 'int'>
+<class 'float'>
+<class 'bool'>
+{'C': 1, 'gamma': 0.001, 'probability': True, 'class_weight': None}
+Index(['raw_128hz_max', 'raw_128hz_min', 'raw_128hz_amp', 'raw_128hz_median',
+       'raw_128hz_std', 'raw_128hz_range', 'raw_128hz_shannon_entropy',
+       'raw_128hz_1d_max', 'raw_128hz_1d_min', 'raw_128hz_1d_amp',
+       'raw_128hz_1d_std', 'raw_128hz_1d_range',
+       'raw_128hz_1d_shannon_entropy', 'filt_128hz_max', 'filt_128hz_min',
+       'filt_128hz_amp', 'filt_128hz_median', 'filt_128hz_std',
+       'filt_128hz_range', 'filt_128hz_1d_max', 'filt_128hz_1d_min',
+       'filt_128hz_1d_amp', 'filt_128hz_1d_std', 'filt_128hz_1d_range',
+       'ar_coeff_1_128hz', 'ar_coeff_2_128hz', 'ar_err_var_128hz',
+       'vfcdm_4/8_128hz_mean', 'first_16thofa_sec_mean',
+       'second_16thofa_sec_mean', 'third_16thofa_sec_mean',
+       'first_16thofa_sec_std', 'second_16thofa_sec_std',
+       'third_16thofa_sec_std', 'third_16thofa_sec_median',
+       'third_16thofa_sec_range', 'first_32thofa_sec_mean',
+       'second_32thofa_sec_mean', 'first_32thofa_sec_std',
+       'second_32thofa_sec_std'],
+      dtype='object')
+Index(['0'], dtype='object')
+[LibSVM]svm score: 0.9223502753457558
+./saved/models/hossain_C_1_gamma_0p001_probability_True_class_weight_None_svm_clf.pkl
+Finished on Mon Jan 20 13:44:50 PST 2025
+Total runtime (sec): 47595.674684524536
