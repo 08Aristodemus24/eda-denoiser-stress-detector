@@ -19,7 +19,7 @@
 
 /server-side/modelling/saved/models/*.pkl
 /server-side/modelling/saved/models/*.zip
-/test.test
+/eda-denoiser-stress-detector.zip
 
 # Logs
 /client-side/logs

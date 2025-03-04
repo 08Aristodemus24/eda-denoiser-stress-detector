@@ -27,7 +27,7 @@ app = Flask(__name__, template_folder='static')
 # api endpoint at http://127.0.0.1:5000/ we must set the allowed
 # origins or web apps with specific urls like http://127.0.0.1:5000
 # to be included otherwise it will be blocked by CORS policy
-CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5000", "https://eda-signal-classifier.vercel.app"])
+CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5000", "http://localhost:5000" "https://eda-signal-classifier.vercel.app"])
 
 # global variables
 models = {
@@ -405,12 +405,12 @@ def predict():
         print(f'labels shape: {subject_labels.shape}')
 
         # load test signals and use it to extract the higher order features from it
-        subject_signals, subject_labels = charge_raw_data(subject_eda_data, x_col="raw_signal", y_col='label', scale=True, verbose=True)
+        subject_signals, _ = charge_raw_data(subject_eda_data, x_col="raw_signal", y_col='label', scale=True, verbose=True)
         print(f'signals {subject_signals}, shape: {subject_signals.shape}')
         print(f'labels {subject_labels}, shape: {subject_labels.shape}')
 
         # extract higher features
-        lstm_fe_main = models[model_name]['feature_extractor']
+        lstm_fe_main = models[f"{selector_config}-lstm-fe"]['feature_extractor']
         subject_hof_arr = lstm_fe_main.predict(subject_signals)
         columns = [f'HOF_{i}' for i in range(1, subject_hof_arr.shape[1] + 1)]
         subject_hof = pd.DataFrame(subject_hof_arr, columns=columns)
