@@ -534,7 +534,7 @@ def create_hyper_param_config(hyper_param_list: list[str]):
     return hyper_param_config
 
 
-def get_class_weight(comp_type: str | int | float | None):
+def get_class_weight(comp_type: str | int | float | None, subjects_labels):
     try:
         comp_type = ast.literal_eval(comp_type)
     except ValueError:
