@@ -15,7 +15,7 @@
 12. we run `sudo docker build -t <name of image e.g. eda-denoiser-stress-detector> .` to build image 
 13. to run the image as a container we run `sudo docker run -d -p 5000:5000 <image name or id e.g. eda-denoiser-stress-detector>`. This is to run our container in detached 
 14. we can set the host name instead of a public ipv4 adress to eda-denoiser-stress-detector.pup.com by sudo hostnamectl eda-denoiser-stress-detector.pup.com, and then reboot by sudo reboot and then reentering the VM by ssh'ing into the VM again.
-
+15. `docker system prune -a --volumes -f` to purge docker data from linux
 this is to change the host name of our ec2 insatnce https://docs.aws.amazon.com/linux/al2/ug/set-hostname.html. Sometimes we may want a better looking domain name called eda-denoiser-stress-detector.pup.edu.com 
 
 # test commands:

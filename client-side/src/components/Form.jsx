@@ -68,7 +68,7 @@ export default function Form(){
             // // for development
             // const url = 'http://127.0.0.1:5000/send-data';
             // for production
-            const url = "https://eda-denoiser-stress-detector.pup.com/model-names";
+            const url = "http://18.119.121.41:5000/send-data";
 
             const resp = await fetch(url, {
                 'method': 'POST',
