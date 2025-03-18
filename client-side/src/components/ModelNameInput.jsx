@@ -28,7 +28,10 @@ export default function ModelNameInput({ children }){
     
     const get_model_names = async () => {
         try{
-            const url = 'http://127.0.0.1:5000/model-names';
+            // for production
+            const url = "https://eda-denoiser-stress-detector.pup.com/model-names";
+            // // for development
+            // const url = 'http://127.0.0.1:5000/model-names';
             const response = await fetch(url);
 
             if(response.status === 200){

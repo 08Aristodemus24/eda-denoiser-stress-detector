@@ -66,9 +66,9 @@ export default function Form(){
             // send here the data from the contact component to 
             // the backend proxy server
             // // for development
-            const url = 'http://127.0.0.1:5000/send-data';
+            // const url = 'http://127.0.0.1:5000/send-data';
             // for production
-            // const url = 'https://project-alexander.vercel.app/send-data';
+            const url = "https://eda-denoiser-stress-detector.pup.com/model-names";
 
             const resp = await fetch(url, {
                 'method': 'POST',

@@ -1,3 +1,23 @@
+# Deployment:
+1. launch ec2 instance in your aws account
+2. pick amzn2-ami-kernel-5.10-hvm-2.0.20250305.0-x86_64-gp2 as the amazon machine image (AMI)
+3. pick t2.micro as instance type since it is free tier
+4. create new key pair if there isn't any , the key pair type must be rsa and the private key format .pem, this will be downloaded and you ought to save it in your machines .ssh directory containing all your ssh keys, because you will use this to login to and from the ec2 instance (which is a VM like theo ne you used at coare)
+5. set network settings to allow ssh traffic from anywhere (note this is not to be used during production), and allow https and http traffic from the internet
+6. configure storage to however you want but free tier is below 30g only as going above will now charge your debit card
+7. to enter into aws instance or VM we typically enter the ff. command again indicating the path of our ssh key which before was an identity file but is now a .pem file `ssh -i C:/Users/<local username>/.ssh/eda_denoiser_stress_detector/eda-denoiser-stress-detector-ssh.pem <ec2 isntance user name e.g. ec2-user>@<public ip address of ec2 instasnce>`
+8. once connected to the VM we run `sudo yum update -y` to update the system if there is any updates and `sudo amazon-linux-extras install docker -y` to install docker. Note if `Loaded plugins: extras_suggestions, langpacks, priorities, update-motd No packages marked for update` prompt is shown this means that there are no packages on your Amazon Linux 2 (AL2) EC2 instance that require updates at this time.
+9. we then run `sudo service docker start` to start docker as we typically do in our machine when we run our containers we initially open docker desktop first as this runs docker
+10. make a folder in our present working directory using `mkdir -p <name of folder e.g. scripts>`
+11. we copy the files we have containing our dockeer image using `scp -r -i "C:/Users/<local username>/.ssh/eda_denoiser_stress_detector/eda-denoiser-stress-detector-ssh.pem" C:/Users/<username>/Documents/Scripts/eda-denoiser-stress-detector/ <ec2 instance user name e.g. ec2-user>@<public ip address of ec2 instance>:/home/<ec2 instance user name>/scripts`
+
+
+12. we run `sudo docker build -t <name of image e.g. eda-denoiser-stress-detector> .` to build image 
+13. to run the image as a container we run `sudo docker run -d -p 5000:5000 <image name or id e.g. eda-denoiser-stress-detector>`. This is to run our container in detached 
+14. we can set the host name instead of a public ipv4 adress to eda-denoiser-stress-detector.pup.com by sudo hostnamectl eda-denoiser-stress-detector.pup.com, and then reboot by sudo reboot and then reentering the VM by ssh'ing into the VM again.
+
+this is to change the host name of our ec2 insatnce https://docs.aws.amazon.com/linux/al2/ug/set-hostname.html. Sometimes we may want a better looking domain name called eda-denoiser-stress-detector.pup.edu.com 
+
 # test commands:
 * `python tuning_dl.py -m lstm-cnn -pl jurado -lr 5e-5 --mode tuning`
 * `python tuning_dl.py -m lstm-svm -pl cueva -lr 1e-3 --batch_size 1024 --mode tuning`
