@@ -1,3 +1,3 @@
 git add .
-git commit -m "remote updated from .bat file"
-git push origin master
+git commit -m "updated from shell file"
+git push origin master 
