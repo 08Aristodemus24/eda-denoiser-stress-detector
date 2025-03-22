@@ -462,6 +462,7 @@ def disp_cat_feat(df, cat_cols: list, fig_dims: tuple=(3, 2), img_title: str="un
         colors = [hex_color_gen() for _ in range(n_unqiue)]
         print(colors, n_unqiue)
         chosen_colors = np.random.choice(colors, n_unqiue, replace=False)
+        
         # list all categorical columns no of occurences of each of their unique values
         ax = val_counts.plot(kind='barh', ax=axes[index], color=chosen_colors)
 
