@@ -11,7 +11,6 @@
 10. make a folder in our present working directory using `mkdir -p <name of folder e.g. scripts>`
 11. we copy the files we have containing our dockeer image using `scp -r -i "C:/Users/<local username>/.ssh/eda_denoiser_stress_detector/eda-denoiser-stress-detector-ssh.pem" C:/Users/<username>/Documents/Scripts/eda-denoiser-stress-detector/ <ec2 instance user name e.g. ec2-user>@<public ip address of ec2 instance>:/home/<ec2 instance user name>/scripts`
 
-
 12. we run `sudo docker build -t <name of image e.g. eda-denoiser-stress-detector> .` to build image 
 13. to run the image as a container we run `sudo docker run -d -p 5000:5000 <image name or id e.g. eda-denoiser-stress-detector>`. This is to run our container in detached 
 14. we can set the host name instead of a public ipv4 adress to eda-denoiser-stress-detector.pup.com by sudo hostnamectl eda-denoiser-stress-detector.pup.com, and then reboot by sudo reboot and then reentering the VM by ssh'ing into the VM again.
@@ -715,6 +714,17 @@ You can also experiment with different F1-score variants to see which one best s
 * Logon Type: Key file
 * User: Your SFTP username i.e. michael.cueva or whatever username coare verified in your application for an account
 * Key file: Use Browse to select your SSH private key or otherwise add the path to your SSH private key. For MacOS users, your private SSH key is typically stored at /Users/USERNAME/.ssh/id_rsa (replace USERNAME with your device username).
+
+28. docker commands
+* run `docker build -t <name of image e.g. eda-denoiser-stress-detector> .` to build image 
+* running `docker images` lists all the built images
+* running `docker image rm <id or name of image>` removes the image that was built
+* running `docker run -p <unused port like 80 in local machine>:<unused port in container like 80> <image name or id>` will run the built image as a container
+* to echo contents of file in bash terminal run `cat <name of file>.<file ext>`
+* we could also enter an images container to run bash commands and see what files are in the container e.g. `docker run -it <image name or id> bash`
+* to stop a docker container use `docker container stop <container id or name>`
+* `from ubuntu pip install python etc.` when built creates an image which we can run as a container, we can then use this image as "framework" for other apps so that we don't have to `from ubuntu` again and install python explicitly again in the dockerfile of our project. This essentially prevents us from doing things from scratch everytime
+* we can run `docker run -d -p <unused port like 80 in local machine>:<unused port in container like 80> <image name or id>` also run an image as a container in detached mode meaning the running code doesn't need to run in our terminal in the background, as running in detached mode will run this background process in an encapsulated manner meaning we won't see this in our terminal anymore but the background process will still run
 
 
 ## artifact detection and correction:
