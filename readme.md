@@ -17,8 +17,16 @@
 15. `docker system prune -a --volumes -f` to purge docker data from linux
 this is to change the host name of our ec2 insatnce https://docs.aws.amazon.com/linux/al2/ug/set-hostname.html. Sometimes we may want a better looking domain name called eda-denoiser-stress-detector.pup.edu.com 
 16. docker container reaches 10gb in memory usage, 11gb of storage, so it makes sense that we have to buffer these values when picking our ec2 instance so that to be safe it runs efficiently. So In this case wee might need 16gb of memory and 28gb of storage for the ec2 instance
+17. now I knwo that the .dockerignore is used like a .gitignore but instead of ignoring files to be pushed or copied to a remote repository we are ignoring files to be pushed or copied to a docker container. 
+``` 
+/benchmark papers/
+/client-side/
+/references/
+/.git/
+```
+here in this `.dockerignore` file we don't want to copy the `benchmark papers`, `client-side`, `references`, and `.git` folders/directories since this (especially the `.git` folder) can contain take up large amounts of storage space and pushing/copying this to a docker container can be especially tedious and time consuming and not to mention costly if indeed deployed to a server since it might take too much storage space
 
-other deployment options could use ecs (elastic container service) apart from ec2 instances 
+18. other deployment options could use ecs (elastic container service) apart from ec2 instances 
 
 # test commands:
 * `python tuning_dl.py -m lstm-cnn -pl jurado -lr 5e-5 --mode tuning`
