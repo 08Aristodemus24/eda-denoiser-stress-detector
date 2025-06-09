@@ -23,7 +23,6 @@ export default function Researchers (){
             // mobile_num: "(+63) 970 745 1021", 
             socials: {
                 linkedin: "https://www.linkedin.com/in/christaline-calubayan-01127b262/",
-                facebook: "https://www.facebook.com/cchrstln",
                 github: "https://github.com/cchrxstln"
             }
         },
@@ -34,7 +33,6 @@ export default function Researchers (){
             // mobile_num: "(+63) 970 745 1021", 
             socials: {
                 linkedin: "https://www.linkedin.com/in/deseree-quiray-7b6a74330",
-                facebook: "https://www.facebook.com/deseree.quiray",
             }
         },
         {
@@ -44,7 +42,6 @@ export default function Researchers (){
             // mobile_num: "(+63) 970 745 1021", 
             socials: {
                 linkedin: "https://www.linkedin.com/in/johana-benolirao-8902172ba",
-                facebook: "https://www.facebook.com/iamwana18",
             }
         },
         {
@@ -54,7 +51,6 @@ export default function Researchers (){
             mobile_num: "(+63) 970 745 1021", 
             socials: {
                 linkedin: "https://www.linkedin.com/in/michaelcueva/",
-                facebook: "https://fb.com/mig.cueva.7",
                 github: "https://github.com/08Aristodemus24",
                 website: "https://project-alexander.vercel.app/"
             }
