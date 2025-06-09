@@ -63,6 +63,8 @@ export default function Form(){
             setShowArt(true);
             setShowStressLevels(false);
 
+            console.log(form_data);
+
             // send here the data from the contact component to 
             // the backend proxy server
             // // for development
