@@ -45,7 +45,7 @@ export default function Researchers (){
             }
         },
         {
-            display: "https://raw.githubusercontent.com/08Aristodemus24/eda-denoiser-stress-detector/master/client-side/src/assets/mediafiles/profiles/larry.jpg",
+            display: "https://raw.githubusercontent.com/08Aristodemus24/eda-denoiser-stress-detector/master/client-side/src/assets/mediafiles/profiles/larry.png",
             name: "Larry Miguel R. Cueva", 
             role: "Lead AI/ML Engineer & Researcher", 
             mobile_num: "(+63) 970 745 1021", 
