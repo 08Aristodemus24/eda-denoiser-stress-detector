@@ -258,6 +258,10 @@ def predict():
     further normalization based on the scaler used during training
     """
 
+    # print(request)
+    # return jsonify({
+    #     "test": "response"
+    # })
     # extract raw data from client
     raw_data = request.form
     print(raw_data)

@@ -81,6 +81,43 @@ going back our requests to the server will now be `https://<hugging face usernam
 
 before committing and pushing it is imperative that all form of .jpg, .png, .env files are not committed to the hugging face spaces repository as this will result in an error. 
 
+5. for some reason when posting data to `https://<hugging face username>-<hugging face space name>.hf.spaces/send-data` it returns this html instead. For some reason the request does not go through
+```
+<html>
+  <head>
+    <title>Internal Server Error</title>
+  </head>
+  <body>
+    <h1><p>Internal Server Error</p></h1>
+    
+  </body>
+</html>
+```
+maybe the reason is the long running process of processing the eda signals is what leads to the request by gunicorn timing out after a default time of 30 seconds and even longer of 120 seconds. What we could do is set the timeout to infinite such that the request can get done after an indefinite amount of time since this is after all what this function does. 
+process long running request without timing out gunicorn
+https://stackoverflow.com/questions/8964399/long-running-requests-with-gunicorn-nginx
+https://www.reddit.com/r/Python/comments/7oys31/problem_with_gunicorn_and_long_running_tasks/
+https://docs.gunicorn.org/en/stable/design.html#choosing-a-worker-type
+https://serverfault.com/questions/352123/long-running-requests-with-gunicorn-nginx
+kasi nagbibigay naman siya ng okay request if ito lang ang payload
+```
+{
+  "show_raw": true,
+  "spreadsheet_file": <some file>,
+  "model_name": "cueva-C_1_gamma_0p1_svm",
+  "show_art": true
+  "show_correct": false
+}
+```
+in place of the original functions body which processes the eda signals from the .csv file to test whether there is something wrong with the origin.
+```
+print(request)
+return jsonify({
+    "test": "response"
+})
+extract raw data from client
+```
+so indeed gumana na when I set hte timeout of gunicorn in the dockerfile to 0 so that it can process requests that last indefinitely like the processing of eda signals
 
 # test commands:
 * `python tuning_dl.py -m lstm-cnn -pl jurado -lr 5e-5 --mode tuning`

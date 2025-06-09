@@ -33,5 +33,5 @@ WORKDIR /server-side
 EXPOSE 7860
 
 # Run with Gunicorn with 4 workers and bind host to port 7860
-CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:7860", "index:app"]
+CMD ["gunicorn", "--workers", "4", "--bind", "0.0.0.0:7860", "--timeout", "0", "index:app"]
 
