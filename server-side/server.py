@@ -27,7 +27,7 @@ app = Flask(__name__, template_folder='static')
 # api endpoint at http://127.0.0.1:5000/ we must set the allowed
 # origins or web apps with specific urls like http://127.0.0.1:5000
 # to be included otherwise it will be blocked by CORS policy
-CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5000", "http://localhost:5000"])
+CORS(app, origins=["http://localhost:5173", "http://127.0.0.1:5000", "http://localhost:5000", "https://aristodemus8-eda-denoiser-stress-detector.hf.space"])
 
 # global variables
 models = {
@@ -260,6 +260,7 @@ def predict():
 
     # extract raw data from client
     raw_data = request.form
+    print(raw_data)
     raw_files = request.files
 
     model_name = raw_data['model_name']
