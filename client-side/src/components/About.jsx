@@ -36,7 +36,8 @@ export default function Correspondence(){
                     Automatic motion artifact detection in electrodermal activity data using
                     machine learning</a> by Hossain et al. (2022) or <a href="https://biosignal.uconn.edu/wp-content/uploads/sites/2503/2022/01/01_Hossain_2022_BSPC.pdf">
                     this link</a> alternatively. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5413200/">Automatic Identification of Artifacts in Electrodermal Activity Data</a> by 
-                    Taylor et al. (2015). <a href="https://www.sciencedirect.com/science/article/pii/S0957417423010837?via%3Dihub">Automatic artifact recognition and correction for electrodermal activity based on LSTM-CNN models by</a> by Llanes-Jurado et al. (2023)
+                    Taylor et al. (2015). <a href="https://www.sciencedirect.com/science/article/pii/S0957417423010837?via%3Dihub">Automatic artifact recognition and correction for electrodermal activity based on LSTM-CNN models</a> by Llanes-Jurado et al. (2023).
+                    Visit the publication of our study <a href="http://dx.doi.org/10.13140/RG.2.2.34355.95525">here</a>
                 </p>
             </div>
         </Section>
