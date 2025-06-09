@@ -12,7 +12,7 @@
 
 /server-side/.env
 /server-side/modelling/results/*.csv
-
+    
 !/server-side/modelling/data/dummy.txt
 !/server-side/modelling/data/Artifact Detection Data/reduced_*.txt
 !/server-side/modelling/data/Hybrid Artifact Detection Data/dummy.txt

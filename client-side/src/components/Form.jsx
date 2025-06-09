@@ -67,8 +67,10 @@ export default function Form(){
             // the backend proxy server
             // // for development
             // const url = 'http://127.0.0.1:5000/send-data';
-            // for production
-            const url = "http://18.119.121.41:5000/send-data";
+            
+            // for production since it hugging face the format of the url when
+            // an app is deployed is 'https://<hg user name>-<hf space name>.hf.space'
+            const url = 'https://aristodemus8-eda-denoiser-stress-detector.hf.space/send-data';
 
             const resp = await fetch(url, {
                 'method': 'POST',

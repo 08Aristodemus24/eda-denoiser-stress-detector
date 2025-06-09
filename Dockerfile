@@ -25,7 +25,13 @@ COPY server-side ./server-side
 # switch to server-side directory
 WORKDIR /server-side
 
-EXPOSE 5000
+# EXPOSE 5000
 
-CMD ["python", "index.py"]
+# CMD ["python", "index.py"]
+
+# Expose default port
+EXPOSE 7860
+
+# Run with Gunicorn
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:7860", "index:app"]
 
