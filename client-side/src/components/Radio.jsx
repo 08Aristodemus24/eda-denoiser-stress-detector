@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { DesignsContext } from "../contexts/DesignsContext";
 import { FormInputsContext } from "../contexts/FormInputsContext";
-import { S3 } from "aws-sdk";
 
 export default function Radio(props){
     // initialize and define theme of component by using

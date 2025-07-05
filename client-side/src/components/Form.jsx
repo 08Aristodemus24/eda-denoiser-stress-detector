@@ -72,11 +72,11 @@ export default function Form(){
             // send here the data from the contact component to 
             // the backend proxy server
             // // for development
-            const url = 'http://127.0.0.1:5000/send-data';
+            // const url = 'http://127.0.0.1:5000/send-data';
             
             // for production since it hugging face the format of the url when
             // an app is deployed is 'https://<hg user name>-<hf space name>.hf.space'
-            // const url = 'https://aristodemus8-eda-denoiser-stress-detector.hf.space/send-data';
+            const url = 'https://aristodemus8-eda-denoiser-stress-detector.hf.space/send-data';
 
             const resp = await fetch(url, {
                 'method': 'POST',
