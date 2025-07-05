@@ -472,19 +472,20 @@
 }
 
 
-
 /* input group and checkboxes */
 .input-group-container{
 
 }
 
-.checkbox-container{
+.checkbox-container,
+.radio-container{
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.sharp-minimal .checkbox-label{
+.sharp-minimal .checkbox-label,
+.sharp-minimal .radio-label{
   /* design */
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;

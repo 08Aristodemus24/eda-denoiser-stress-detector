@@ -258,21 +258,20 @@ def predict():
     further normalization based on the scaler used during training
     """
 
-    # print(request)
-    # return jsonify({
-    #     "test": "response"
-    # })
-    # extract raw data from client
+    # if user requests for demo file raw_files will be empty
+    # but if user uploads a file the raw_files will have this file
     raw_data = request.form
-    print(raw_data)
     raw_files = request.files
 
-    model_name = raw_data['model_name']
-    spreadsheet_file = raw_files['spreadsheet_file']
-    spreadsheet_fname = re.sub(r".csv", "", spreadsheet_file.filename)
-    show_raw = raw_data['show_raw']
-    show_correct = raw_data['show_correct']
-    show_art = raw_data['show_art']
+    model_name = raw_data.get('model_name')
+    
+    spreadsheet_file = raw_files.get('spreadsheet_file')
+    spreadsheet_file = raw_data.get('spreadsheet_file') if not spreadsheet_file  else spreadsheet_file
+
+    # spreadsheet_fname = re.sub(r".csv", "", spreadsheet_file.filename)
+    show_raw = raw_data.get('show_raw')
+    show_correct = raw_data.get('show_correct')
+    show_art = raw_data.get('show_art')
 
     subject_eda_data = pd.read_csv(spreadsheet_file, sep=';')
     subject_eda_data.columns = ['time', 'raw_signal', 'clean_signal', 'label', 'auto_signal', 'pred_art', 'post_proc_pred_art']

@@ -1,5 +1,6 @@
 import ModelNameInput from './ModelNameInput';
 import SpreadSheetInput from './SpreadSheetInput';
+import Radio from './Radio';
 import InputGroup from './InputGroup';
 import Checkbox from './Checkbox';
 import Button from "./Button";
@@ -18,6 +19,8 @@ export default function Form(){
 
     let [sprSheetFile, setSprSheetFile] = useState(null);
     let [initSprSheet, setInitSprSheet] = useState([]);
+
+    let [useDemo, setUseDemo] = useState(false);
 
     let [showRaw, setShowRaw] = useState(true);
     let [showCorrect, setShowCorrect] = useState(false);
@@ -48,7 +51,7 @@ export default function Form(){
             const form_data = new FormData();
             form_data.append('model_name', modelName);
             // form_data.append('spreadsheet', sprSheet);
-            form_data.append('spreadsheet_file', sprSheetFile)
+            form_data.append('spreadsheet_file', useDemo === false ? sprSheetFile : "s3://eda-denoiser-stress-detector-bucket/oxused_expert2.csv")
             form_data.append('show_raw', showRaw);
             form_data.append('show_correct', showCorrect);
             form_data.append('show_art', showArt);
@@ -62,17 +65,18 @@ export default function Form(){
             setShowCorrect(false);
             setShowArt(true);
             setShowStressLevels(false);
+            setUseDemo(false);
 
             console.log(form_data);
 
             // send here the data from the contact component to 
             // the backend proxy server
             // // for development
-            // const url = 'http://127.0.0.1:5000/send-data';
+            const url = 'http://127.0.0.1:5000/send-data';
             
             // for production since it hugging face the format of the url when
             // an app is deployed is 'https://<hg user name>-<hf space name>.hf.space'
-            const url = 'https://aristodemus8-eda-denoiser-stress-detector.hf.space/send-data';
+            // const url = 'https://aristodemus8-eda-denoiser-stress-detector.hf.space/send-data';
 
             const resp = await fetch(url, {
                 'method': 'POST',
@@ -111,6 +115,7 @@ export default function Form(){
             sprSheetFile, setSprSheetFile,
             initSprSheet, setInitSprSheet,
             // finalSprSheet, setFinalSprSheet,
+            useDemo, setUseDemo,
             showRaw, setShowRaw,
             showCorrect, setShowCorrect,
             showArt, setShowArt,
@@ -129,6 +134,7 @@ export default function Form(){
                 >
                     <ModelNameInput/>
                     <SpreadSheetInput/>
+                    <Radio label="Or use a demo file" name="use_demo"/>
                     <InputGroup>
                         <Checkbox label="show raw" name="show_raw"/>
                         <Checkbox label="show artifact" name="show_artifact"/>

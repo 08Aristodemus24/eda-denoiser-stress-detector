@@ -3,6 +3,7 @@ import { ThemeContext } from "../contexts/ThemeContext";
 import { DesignsContext } from "../contexts/DesignsContext";
 import { FormInputsContext } from "../contexts/FormInputsContext";
 
+
 import Button from "./Button";
 
 import * as d3 from 'd3';
@@ -28,7 +29,7 @@ export default function SpreadSheetInput({ children }){
     // all its states we use the state appropriate to the ImageInput
     // component and its setter to set from this component the state of
     // the form
-    let { initSprSheet, setInitSprSheet, sprSheetFile, setSprSheetFile } = useContext(FormInputsContext);
+    let { initSprSheet, setInitSprSheet, sprSheetFile, setSprSheetFile, useDemo } = useContext(FormInputsContext);
 
     const handleUpload = (event) => {
         event.preventDefault();
@@ -36,10 +37,12 @@ export default function SpreadSheetInput({ children }){
         // read .csv file
         let reader = new FileReader();
         let file = event.target.files[0];
+        console.log(file)
 
         setSprSheetFile(file);
         reader.onload = (event) => {
             let csvToText = event.target.result;
+            console.log(csvToText)
             let output = csvToJSON(csvToText, ";");
             setInitSprSheet(output);
         };
@@ -86,7 +89,8 @@ export default function SpreadSheetInput({ children }){
         
         <div className={`spreadsheet-upload-container ${design}`} style={style}>
             <label htmlFor="spreadsheet-upload" className="spreadsheet-upload-label">File</label>    
-            <input 
+            <input
+                disabled={useDemo}
                 type="file" 
                 accept="file/*" 
                 id="spreadsheet-upload" 

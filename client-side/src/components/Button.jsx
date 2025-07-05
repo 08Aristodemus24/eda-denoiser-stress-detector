@@ -11,7 +11,7 @@ export default function Button({ children }){
     const themes = useContext(ThemeContext);
 
     /** where to actually display or undisplay path object when either show raw or show correct states are changed */
-    let { initSprSheet, showRaw, showCorrect, showArt, showStressLevels } = useContext(FormInputsContext);
+    let { initSprSheet, useDemo } = useContext(FormInputsContext);
 
     const { design, theme } = themes;
     
@@ -38,12 +38,25 @@ export default function Button({ children }){
         }
     } : null;
 
-    console.log(`iniSprSheet is empty? ${initSprSheet == 0 ? true : false}`);
+    console.log(`iniSprSheet is empty? ${initSprSheet.length === 0 ? true : false}`);
+    console.log(`use demo? ${useDemo}`)
+
+    // unlock button only if use Demo is true or initSprSheet
+    // is not null or both
+
+    // if initSprSheet is empty set to (true) and if useDemo (false) set enable to false
+    // if initSprSheet has set to (false) and if useDemo (false) set enable to true
+    // if initSprSheet is empty set to (true) and if useDemo (true) set enable to true
+    // if initSprSheet has set to (false) and if useDemo (true) set enable to true
+
+    const xand = (a, b) => !(a ^ b);
+    const spreadsheetEmpty = initSprSheet.length === 0 ? true : false;
+    const enableButton = !xand(spreadsheetEmpty, useDemo)
 
     return (
         <div className={`submit-btn-container ${design}`} style={style}>
             <button
-                disabled={initSprSheet == 0 ? true : false}
+                disabled={enableButton}
                 type="submit"
                 className={`submit-btn ${design}`} 
                 onMouseDown={toggle} 
