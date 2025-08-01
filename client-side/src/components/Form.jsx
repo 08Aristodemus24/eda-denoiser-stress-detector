@@ -45,13 +45,15 @@ export default function Form(){
     let [response, setResponse] = useState(null);
     let [msgStatus, setMsgStatus] = useState();
     let [errorType, setErrorType] = useState(null);
+
+    const bucket_name = 'edsd-bucket';
     const handleSubmit = async (event) => {
         try {
             event.preventDefault();
             const form_data = new FormData();
             form_data.append('model_name', modelName);
             // form_data.append('spreadsheet', sprSheet);
-            form_data.append('spreadsheet_file', useDemo === false ? sprSheetFile : "s3://eda-denoiser-stress-detector-bucket/oxused_expert2.csv")
+            form_data.append('spreadsheet_file', useDemo === false ? sprSheetFile : `s3://${bucket_name}/oxused_expert2.csv`)
             form_data.append('show_raw', showRaw);
             form_data.append('show_correct', showCorrect);
             form_data.append('show_art', showArt);
