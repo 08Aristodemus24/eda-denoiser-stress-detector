@@ -273,7 +273,7 @@ def predict():
     show_correct = raw_data.get('show_correct')
     show_art = raw_data.get('show_art')
 
-    subject_eda_data = pd.read_csv(spreadsheet_file, sep=';')
+    subject_eda_data = pd.read_parquet(spreadsheet_file)
     subject_eda_data.columns = ['time', 'raw_signal', 'clean_signal', 'label', 'auto_signal', 'pred_art', 'post_proc_pred_art']
     print(subject_eda_data)
     
